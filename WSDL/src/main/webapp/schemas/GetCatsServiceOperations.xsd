@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://ru/acs/webservices/getCatServices" xmlns:cat="http://cat.acs.ru"
+	targetNamespace="http://ru/acs/webservices/getCatServices"
+	elementFormDefault="qualified">
+	<xsd:import namespace="http://cat.acs.ru"
+		schemaLocation="CatDetails.xsd" />
+	<xsd:element name="GetCatRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Id" type="xsd:integer" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="GetCatResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="catDetails" type="cat:Cat" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>  
